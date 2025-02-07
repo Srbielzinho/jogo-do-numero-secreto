@@ -10,7 +10,7 @@ function exebirTextoNaTela(tag,texto){
 }
 function exibirMensagemInicial() {
 exebirTextoNaTela('h1', 'Jogo do número secreto');
-exebirTextoNaTela('p','Escolha um número entre 1 e 100');
+exebirTextoNaTela('p',`Escolha um número entre 1 e ${numeroLimite}`);
 }
 exibirMensagemInicial();
 
@@ -18,7 +18,7 @@ function verificarChute(){
     let chute = document.querySelector('input').value;
 
 if (chute == numeroSecreto){
-    exebirTextoNaTela('h1','Acertou!😁');
+    exebirTextoNaTela('h1','Acertou!😁👏');
     let palavraTentativa = tentativas > 1 ? 'tentativas' :'tentativa'
     let mensagensTetantivas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`
     exebirTextoNaTela('p',mensagensTetantivas);
